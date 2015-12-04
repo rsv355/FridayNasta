@@ -25,6 +25,7 @@
 
        <com.rengwuxian.materialedittext.MaterialEditText
            android:layout_width="match_parent"
+           android:id="@+id/etEmail"
            android:layout_height="wrap_content"
            android:hint="Email address"
            android:textSize="18sp"
@@ -34,6 +35,7 @@
            app:met_singleLineEllipsis="true" />
 
        <com.rengwuxian.materialedittext.MaterialEditText
+           android:id="@+id/etPassword"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:hint="Password"
