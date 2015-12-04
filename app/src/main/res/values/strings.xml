@@ -1,3 +1,7 @@
 <resources>
+    
     <string name="app_name">Friday Nasta</string>
+    
+    <string name="parsse_appID">PTtaqwvQvOi7GJNVKxSEuLCVZgcJfeUU8FmbVoiK</string>
+    <string name="parsse_clientKEY">dH6QEuVgN7LuAO3MlTlaz1suBhCqs6z4zKRn5UJv</string>
 </resources>
