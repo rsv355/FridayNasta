@@ -26,12 +26,10 @@
        <com.rengwuxian.materialedittext.MaterialEditText
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:hint="Email"
-           android:text="enter your email address"
+           android:hint="Email address"
            android:textSize="18sp"
            app:met_baseColor="@color/colorPrimary"
            app:met_floatingLabel="highlight"
-           app:met_maxCharacters="20"
            app:met_primaryColor="@color/colorPrimaryDark"
            app:met_singleLineEllipsis="true" />
 
@@ -40,13 +38,25 @@
            android:layout_height="wrap_content"
            android:hint="Password"
            android:inputType="textPassword"
-           android:text="enter your password"
            android:textSize="18sp"
            app:met_baseColor="@color/colorPrimary"
            app:met_floatingLabel="highlight"
-           app:met_maxCharacters="20"
            app:met_primaryColor="@color/colorPrimaryDark"
            app:met_singleLineEllipsis="true" />
+
+       <TextView
+           android:gravity="center"
+           android:textColor="#fff"
+           android:layout_marginTop="16dp"
+           android:layout_marginRight="32dp"
+           android:layout_marginLeft="32dp"
+           android:textSize="18dp"
+           android:padding="12dp"
+           android:text="Login"
+           android:background="@color/colorPrimaryDark"
+           android:id="@+id/txtLogin"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content" />
 
 
    </LinearLayout>
