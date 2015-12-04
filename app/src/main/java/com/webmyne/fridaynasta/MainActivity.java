@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        getSupportActionBar().setSubtitle("Welcome, Krishna");
+        getSupportActionBar().setSubtitle("Welcome, "+PrefUtils.getUserName(MainActivity.this));
     }
 
     @Override

@@ -84,8 +84,8 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog.show();
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Folks");
-        query.whereEqualTo("Email_id", etEmail.getText().toString().trim().toUpperCase());
-        query.whereEqualTo("Password", etPassword.getText().toString().trim());
+        query.whereEqualTo("email", etEmail.getText().toString().trim());
+        query.whereEqualTo("password", etPassword.getText().toString().trim());
 
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
@@ -95,12 +95,16 @@ public class LoginActivity extends AppCompatActivity {
                 if (e == null) {
                     if (parseObjects.size() != 0) {
 
-                        String email = parseObjects.get(0).getString("Email_id");
-                        String id = parseObjects.get(0).getString("Mobile");
-                        String name = parseObjects.get(0).getString("Name");
+                        String email = parseObjects.get(0).getString("email");
+                        String id = parseObjects.get(0).getString("id");
+                        String name = parseObjects.get(0).getString("name");
 
 
                         PrefUtils.saveLogin(LoginActivity.this,true);
+
+                        PrefUtils.saveUserID(LoginActivity.this,id);
+                        PrefUtils.saveUserName(LoginActivity.this,name);
+                        PrefUtils.saveUserEmail(LoginActivity.this,email);
 
                         startActivity(new Intent(LoginActivity.this, LoginActivity.class));
                         finish();
