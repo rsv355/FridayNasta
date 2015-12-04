@@ -2,6 +2,7 @@ package com.webmyne.fridaynasta;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,5 +12,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().setSubtitle("Welcome, Krishna");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        return super.onCreateOptionsMenu(menu);
     }
 }
