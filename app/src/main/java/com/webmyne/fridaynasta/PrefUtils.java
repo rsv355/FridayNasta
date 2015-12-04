@@ -31,6 +31,16 @@ public class PrefUtils {
         return val;
     }
 
+    public static void saveUserEmail (Context ctx,String val){
+        Prefs.with(ctx).save("UserEmail", val);
+    }
+
+    public static String getUserEmail(Context ctx){
+        String val;
+        val = Prefs.with(ctx).getString("UserEmail", "");
+        return val;
+    }
+
 
 
     public static void saveLogin (Context ctx,boolean val){
